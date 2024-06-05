@@ -1,3 +1,4 @@
+import pprint
 from naver_api_token import *
 import requests
 import json
@@ -30,12 +31,10 @@ body = {
 # json.dumps(body) 는 body dictionary를 JSON 형식의 문자열로 변환함.
 response = requests.post(url, headers=headers, data=json.dumps(body))
 
-# 응답 출력
-print("Status Code:", response.status_code)
-print("Response Body:", response.json())
-
+# 코드번호가 200이면 결과값 출력.
+# 아니면 에러코드번호 출력
 if(response.status_code==200):
     response_body = response.json()
-    print(response_body)
+    pprint.pprint(response_body)
 else:
     print("Error Code:" + response.status_code)
