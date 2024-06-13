@@ -48,7 +48,7 @@ for key, value in char_info_list.items():
         link = f"armories/characters/{v['CharacterName']}/profiles"
         headers = {
             'accept': 'application/json',
-            'authorization': f'Bearer {api_key}'
+            'authorization': authorization_key
         }
         response = requests.get(url + link, headers=headers)
         char_img = response.json()
