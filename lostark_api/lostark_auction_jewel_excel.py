@@ -14,7 +14,6 @@ def draw_excel(jewel_info_list):
 
   # 보석 정보 추가
   for i, value in enumerate(jewel_info_list):
-    value = ["", i+1]+value
     ws.append(value)
 
   # 열 범위 설정 (B~G)
@@ -22,21 +21,30 @@ def draw_excel(jewel_info_list):
   lenth = len(jewel_info_list) + 1
 
   # MAX 값 수식 입력
-  max = ([f"=INDEX({col}2:{col}{lenth}, MATCH(MAX(D2:D{lenth}),D2:D{lenth}, 0))"\
+  max_value = ([f"=INDEX({col}2:{col}{lenth}, MATCH(MAX(D2:D{lenth}),D2:D{lenth}, 0))"\
           for col in columns])
-  max.insert(0, "max")
-  ws.append(max)
+  max_value.insert(0, "max")
+  ws.append(max_value)
   
   # MIN 값 수식 입력.
-  min = ([f"=INDEX({col}2:{col}{lenth}, MATCH(MIN(D2:D{lenth}),D2:D{lenth}, 0))"\
+  min_value = ([f"=INDEX({col}2:{col}{lenth}, MATCH(MIN(D2:D{lenth}),D2:D{lenth}, 0))"\
           for col in columns])
-  min.insert(0, "min")
-  ws.append(min)
+  min_value.insert(0, "min")
+  ws.append(min_value)
+
+  # # Lambda 함수를 사용하여 max, min value 사용
+  # max_value = max(jewel_info_list, key=lambda x:x[4])
+  # max_value[0] = "max"
+  # ws.append(max_value)
+
+  # min_value = min(jewel_info_list, key=lambda x:x[4])
+  # min_value[0] = "min"
+  # ws.append(min_value)
 
   # 엑셀 파일 저장
-  wb.save("lostark_jewel.xlsx")
+  wb.save("lostark_jewel_test.xlsx")
   
-def fetch_jewel_data(url, headers, Body):
+def fetch_jewel_data(i, url, headers, Body):
   # post response값 받아옴.
   response = requests.post(url, headers=headers, data= Body)
   # 200 코드 받아오면(정상 작동)
@@ -51,7 +59,7 @@ def fetch_jewel_data(url, headers, Body):
       skill_name = jsonData["Items"][0]["Options"][0]["OptionName"]
 
       # 리스트에 값 추가.
-      return([now, price, jtype, class_name, skill_name])
+      return(["",i, now, price, jtype, class_name, skill_name])
     else:
       print("검색 결과가 없습니다.")
       return None
@@ -78,14 +86,14 @@ def main():
   jewel_info_list = []
 
   # 60회 반복 (한 시간 동안 1분 간격)
-  for i in range(60):
+  for i in range(10):
     # 검색 값을 받아서 jewel_data 에 저장하기
-    jewel_data = fetch_jewel_data(url, headers, Body)
+    jewel_data = fetch_jewel_data(i, url, headers, Body)
     if jewel_data:
        jewel_info_list.append(jewel_data)
 
     # 60초 대기하기 (1분단위)
-    time.sleep(60)
+    time.sleep(10)
 
   draw_excel(jewel_info_list)
 
