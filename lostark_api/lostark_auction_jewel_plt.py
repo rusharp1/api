@@ -1,11 +1,8 @@
-import pprint
 from lostark_api_token import *
 import requests
-import json
 import datetime
 import time
 import matplotlib.pyplot as plt
-
 
 def draw_graph(timestamps, prices):
   # 한글 사용을 위한 폰트 설정
@@ -39,52 +36,56 @@ def draw_graph(timestamps, prices):
   plt.tight_layout()
   plt.show()
 
-url = lostark_url + "/auctions/items"
+def fetch_data(url, headers, Body):
+  timestamps = []
+  prices = []
 
-# 3티어, 7레벨의 보석을 즉시구매가 오름차순으로 검색함.
-Body = {
-  "Sort": "BUY_PRICE",
-  "CategoryCode": 210000,
-  "ItemTier": 3,
-  "ItemName": "7레벨",
-  "PageNo": 0,
-  "SortCondition": "ASC"
-}
-headers = {
-    'authorization': authorization_key,
-    # 'Content-Type': 'application/json'
-}
+  # 한시간
+  for _ in range(60):
+    # 최저값 검색하기.
+    response = requests.post(url,headers=headers, data=Body)
+    if(response.status_code == 200):
+        jsonData = response.json()
 
-timestamps = []
-prices = []
+        if jsonData["Items"]:
+          # 현재 시간 / 최저 가격을 now, price 변수에 입력
+          now = datetime.datetime.now()
+          price = jsonData["Items"][0]["AuctionInfo"]["BuyPrice"]
 
-# 한시간 기다리기
-for i in range(60):
-  # 최저값 검색하기.
-  response = requests.post(url,headers=headers, data=Body)
-  if(response.status_code == 200):
-      jsonData = response.json()
-      if jsonData["Items"]:
-        # 현재 시간 / 최저 가격을 now, price 변수에 입력
-        now = datetime.datetime.now()
-        price = jsonData["Items"][0]["AuctionInfo"]["BuyPrice"]
+          # 리스트에 값 추가.
+          timestamps.append(now.strftime('%Y/%m/%d %H:%M:%S'))
+          prices.append(price)
+        else:
+          print("검색 결과가 없습니다.")
+    else:
+        print("Error Code:" + response.status_code)
 
-        # 리스트에 값 추가.
-        timestamps.append(now.strftime('%Y/%m/%d %H:%M:%S'))
-        prices.append(price)
-      else:
-         print("검색 결과가 없습니다.")
-  else:
-      print("Error Code:" + response.status_code)
+    # 59초 대기하기 (1분단위 유도)
+    time.sleep(59)
+  return timestamps, prices
 
-  # 59초 대기하기 (1분단위 유도)
-  time.sleep(59)
+def main():
+  url = lostark_url + "/auctions/items"
 
-# 리스트에 값 추가.
-timestamps.append(now.strftime('%Y/%m/%d %H:%M:%S'))
-prices.append(price)
+  # 3티어, 7레벨의 보석을 즉시구매가 오름차순으로 검색함.
+  Body = {
+    "Sort": "BUY_PRICE",
+    "CategoryCode": 210000,
+    "ItemTier": 3,
+    "ItemName": "7레벨",
+    "PageNo": 0,
+    "SortCondition": "ASC"
+  }
+  headers = {
+      'authorization': authorization_key,
+      # 'Content-Type': 'application/json'
+  }
 
-draw_graph(timestamps, prices)
+  timestamps, prices = fetch_data(url, headers, Body)
+  
+
+  draw_graph(timestamps, prices)
 
 
-
+if __name__== "__main__":
+   main()
