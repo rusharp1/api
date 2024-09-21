@@ -67,13 +67,22 @@
 * `matplotlib` 라이브러리 설치
 * `openpyxl` 라이브러리 설치
 
-### 3\. 참고사항 \(Notes\)
+### 3. 사용한 API [출처](https://developer-lostark.game.onstove.com/)
+1.  lostark charecter get.py
+    * [https://developer-lostark.game.onstove.com/armories/characters/"CharacterName"/profiles](https://developer-lostark.game.onstove.com/armories/characters/%22CharacterName%22/profiles)
+    * [https://developer-lostark.game.onstove.com/characters/"CharacterName"/siblings](https://developer-lostark.game.onstove.com/characters/%22CharacterName%22/siblings)
+2. lostark auction jewel plt.py
+    * [https://developer-lostark.game.onstove.com/auctions/items](https://developer-lostark.game.onstove.com/auctions/items)
+3. lostark auction jewel excel.py
+    * [https://developer-lostark.game.onstove.com/auctions/items](https://developer-lostark.game.onstove.com/auctions/items)
+
+### 4\. 참고사항 \(Notes\)
 
 * lostark\_api\_token.py 파일에 API 인증 키가 필요합니다. 로스트아크 개발자 페이지에서 발급받은 authorization\_key를 설정해주세요.
 * lostark charecter get.py 에서 네트워크 오류 또는 데이터 누락 시 예외 처리가 발생할 수 있으며, 이러한 경우 "값을 받을 수 없습니다"가 출력됩니다.
 * lostark\_auction\_jewel \* .py 에서 가격 데이터 수집은 1시간동안 진행되며, 실행 중 API 호출이 제한될 수 있으므로 주의가 필요합니다.
 
-### 4\. 설치 방법 \(Installation\)
+### 5\. 설치 방법 \(Installation\)
 
 1. 프로젝트를 로컬에 클론합니다.
 
@@ -90,19 +99,39 @@
     ```
     파일명.py
     ```
+## 3\. Naver API
+ 
+### 1\. 프로젝트 목록
 
-## 2.
+1. 
+### 2\. 사전 요구사항 \(Prerequisites\)
+
+* Python 3.x 설치
+* 
+
+### 3. 사용한 API [출처](ㅁㄴㅇㅁㄴㅇ)
 
 
-## 3\. 사용한 API
-1. lostark_api (출처 : https://developer-lostark.game.onstove.com/ )
-     * lostark charecter get.py
-         * https://developer-lostark.game.onstove.com/armories/characters/"CharacterName"/profiles 
-         * https://developer-lostark.game.onstove.com/characters/"CharacterName"/siblings
-     * lostark auction jewel plt.py
-         * https://developer-lostark.game.onstove.com/auctions/items
-     * lostark auction jewel excel.py 
-         * https://developer-lostark.game.onstove.com/auctions/items
+### 4\. 참고사항 \(Notes\)
+
+* 
+### 5\. 설치 방법 \(Installation\)
+
+1. 프로젝트를 로컬에 클론합니다.
+
+    ```
+    git clone -b master https://github.com/rusharp1/api.git
+    ```
+2. 해당 프로젝트 위치로 이동합니다.
+
+    ```
+    cd ./api/Naver_api
+    ```
+3. 원하는 프로젝트를 실행합니다.
+
+    ```
+    파일명.py
+    ```
 ## 4. LICENSE 
 이 프로젝트는 [MIT License](LICENSE) 에 따라 라이선스가 부여됩니다.
 <img src="https://capsule-render.vercel.app/api?type=waving&amp;color=BDBDC8&amp;height=150&amp;section=footer">
