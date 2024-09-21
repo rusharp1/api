@@ -6,7 +6,7 @@
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Frusharp1%2Fapi&count_bg=%233B3B3B&title_bg=%23B178BE&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
-## 1\. lostark\.api
+## 1\. lostark\_api
 
 ### 1\. 프로젝트 목록
 
@@ -57,8 +57,18 @@
     파일명.py
     ```
 
-## 3.
+## 2.
 
-### 4\. 사용한 API
 
+## 3\. 사용한 API
+1. lostark_api (출처 : https://developer-lostark.game.onstove.com/ )
+     * lostark charecter get.py
+         * https://developer-lostark.game.onstove.com/armories/characters/"CharacterName"/profiles 
+         * https://developer-lostark.game.onstove.com/characters/"CharacterName"/siblings
+     * lostark auction jewel plt.py
+         * https://developer-lostark.game.onstove.com/auctions/items
+     * lostark auction jewel excel.py 
+         * https://developer-lostark.game.onstove.com/auctions/items
+## 4. LICENSE 
+이 프로젝트는 [MIT License](LICENSE) 에 따라 라이선스가 부여됩니다.
 <img src="https://capsule-render.vercel.app/api?type=waving&amp;color=BDBDC8&amp;height=150&amp;section=footer">
