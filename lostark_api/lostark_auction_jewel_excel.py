@@ -93,7 +93,7 @@ def main():
        jewel_info_list.append(jewel_data)
 
     # 60초 대기하기 (1분단위)
-    time.sleep(10)
+    time.sleep(59)
 
   draw_excel(jewel_info_list)
 
