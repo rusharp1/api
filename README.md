@@ -17,14 +17,14 @@
         * 캐릭터가 속한 서버별로 정리된 목록 제공
         * 각 캐릭터의 프로필 이미지, 레벨, 클래스, 아이템 레벨 정보 출력
     3. 명령어 실행 예시
-<details>
-  <summary>명령어 실행 예시 보기/접기</summary>
-* 서버명 별로 캐릭터 개수가 출력되며, 프로필 조회가 되는 경우, 프로필을 링크로 제공
-<img src = "https://github.com/user-attachments/assets/799e1620-e08d-42e9-8cc4-fe79a4c1250f" alt = "명령어 실행 예시">
-</br>
-  * 캐릭터 프로필 이미지를 찾을 수 없거나, 불러오지 않는 경우 링크가 노출되지 않음
- <img src = "https://github.com/user-attachments/assets/bcb8685e-9d8d-4384-90ae-1a60ca18252a" alt = "명령어 실행 예시">
-</details>
+        <details>
+          <summary>명령어 실행 예시 보기/접기</summary>
+        * 서버명 별로 캐릭터 개수가 출력되며, 프로필 조회가 되는 경우, 프로필을 링크로 제공
+        <img src = "https://github.com/user-attachments/assets/799e1620-e08d-42e9-8cc4-fe79a4c1250f" alt = "명령어 실행 예시">
+        </br>
+          * 캐릭터 프로필 이미지를 찾을 수 없거나, 불러오지 않는 경우 링크가 노출되지 않음
+         <img src = "https://github.com/user-attachments/assets/bcb8685e-9d8d-4384-90ae-1a60ca18252a" alt = "명령어 실행 예시">
+        </details>
 2. lostark auction jewel plt.py
 3. lostark auction jewel excel.py
 
