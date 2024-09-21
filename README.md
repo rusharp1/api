@@ -1,4 +1,5 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&amp;color=BDBDC8&amp;height=150&amp;section=header">
+
 # api
 
 > python을 사용하여 api의 데이터를 받고, 응용.
@@ -19,14 +20,14 @@
     3. 명령어 실행 예시
         <details>
           <summary>명령어 실행 예시 보기/접기</summary>
-        * 서버명 별로 캐릭터 개수가 출력되며, 프로필 조회가 되는 경우, 프로필을 링크로 제공
-        <img src = "https://github.com/user-attachments/assets/799e1620-e08d-42e9-8cc4-fe79a4c1250f" alt = "명령어 실행 예시">
+        - 서버명 별로 캐릭터 개수가 출력되며, 프로필 조회가 되는 경우, 프로필을 링크로 제공
+            <img src = "https://github.com/user-attachments/assets/799e1620-e08d-42e9-8cc4-fe79a4c1250f" alt = "명령어 실행 예시">
         </br>
-          * 캐릭터 프로필 이미지를 찾을 수 없거나, 불러오지 않는 경우 링크가 노출되지 않음
-         <img src = "https://github.com/user-attachments/assets/bcb8685e-9d8d-4384-90ae-1a60ca18252a" alt = "명령어 실행 예시">
+          - 캐릭터 프로필 이미지를 찾을 수 없거나, 불러오지 않는 경우 링크가 노출되지 않음
+             <img src = "https://github.com/user-attachments/assets/bcb8685e-9d8d-4384-90ae-1a60ca18252a" alt = "명령어 실행 예시">
         </details>
 2. lostark auction jewel plt.py
-3. lostark auction jewel excel.py
+4. lostark auction jewel excel.py
 
 ### 2\. 사전 요구사항 \(Prerequisites\)
 
