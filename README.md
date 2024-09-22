@@ -99,13 +99,25 @@
  
 ### 1\. 프로젝트 목록
 
-1. 
+#### 1. search_local.py
+1. 프로젝트 개요 (Introduction)
+    * 이 프로젝트는 네이버의 오픈 API를 활용하여 지역 정보를 검색하는 Python 스크립트입니다. 사용자는 네이버 API의 로컬 검색 기능을 통해 특정 지역을 검색할 수 있으며, 요청에 대한 응답을 JSON 형식으로 받아 이를 출력합니다. 이를 통해 원하는 지역 정보를 쉽게 조회하고 활용할 수 있습니다. 기본적인 API 와 python 을 사용하기 위해 연습한 프로젝트 입니다.
+2. 기능 설명 (Features)
+    * 네이버 지역 서비스에 등록된 업체 및 기관중 서울 지역의 검색 결과를 pprint를 사용하여 가독성을 높여 출력
+3. 명령어 실행 예시
+      <details>
+         <summary>명령어 실행 예시 보기/접기</summary>
+            <img src = "https://github.com/user-attachments/assets/a7e638fd-fc5d-4a6e-8690-63aeebd68a7d" alt = "명령어 실행 예시">
+          </details>
+
 ### 2\. 사전 요구사항 \(Prerequisites\)
 
 * Python 3.x 설치
-* 
+* `requests` 라이브러리
+* `pprint `모듈 (Python 내장 모듈)
 
-### 3. 사용한 API [출처](ㅁㄴㅇㅁㄴㅇ)
+
+### 3. 사용한 API [출처](https://developers.naver.com/docs/common/openapiguide/apilist.md#%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EB%B0%A9%EC%8B%9D-%EC%98%A4%ED%94%88-api)
 
 
 ### 4\. 참고사항 \(Notes\)
