@@ -38,3 +38,6 @@ if(response.status_code==200):
     pprint.pprint(response_body)
 else:
     print("Error Code:" + response.status_code)
+
+print("")
+input("완료되었습니다.")

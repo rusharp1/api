@@ -86,7 +86,7 @@ def main():
   jewel_info_list = []
 
   # 60회 반복 (한 시간 동안 1분 간격)
-  for i in range(10):
+  for i in range(60):
     # 검색 값을 받아서 jewel_data 에 저장하기
     jewel_data = fetch_jewel_data(i, url, headers, Body)
     if jewel_data:

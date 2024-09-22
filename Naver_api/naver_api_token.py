@@ -1,2 +1,2 @@
-client_id = 'zRepbeJFXE9eNreq63jf'
-client_secret = 'TE8wp23bAr'
+client_id = "발급받은_클라이언트_ID"
+client_secret = "발급받은_클라이언트_시크릿"

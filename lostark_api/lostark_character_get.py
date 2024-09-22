@@ -38,7 +38,10 @@ def get_profile_images(character):
     response = requests.get(lostark_url + link, headers=headers)
     
     # 캐릭터 이미지 중 'CharacterImage'에 해댕하는 내용만 가져옴
-    return response.json()['CharacterImage']
+    try:
+        return response.json()['CharacterImage']
+    except:
+        return "값을 받을 수 없습니다." 
 
 def display_characters(char_info_list):
     for key, value in char_info_list.items():
@@ -74,6 +77,9 @@ def main():
     char_info_list = characters_by_server(characters, ServerName_list)
     # 서버이름 별 캐릭터 출력하기
     display_characters(char_info_list)
+
+    print("")
+    input("완료되었습니다.")
 
 if __name__== "__main__":
    main()
