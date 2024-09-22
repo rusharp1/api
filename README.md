@@ -48,7 +48,13 @@
     * 수집된 가격 데이터의 최대값과 최소값을 자동으로 계산하여 엑셀 파일에 기록합니다.
     * 1분 간격으로 가격을 기록하여, 시간에 따른 가격 변화를 보여줍니다.
 3. 명령어 실행 예시
-    
+      <details>
+            <a href="https://github.com/user-attachments/files/17088528/lostark_jewel_test.xlsx" target="_blank">
+          lostark_jewel_test.xlsx 파일 다운로드
+        </a>
+          </details>
+
+
 ### 2\. 사전 요구사항 \(Prerequisites\)
 
 * Python 3.x 설치
@@ -61,9 +67,12 @@
     * [https://developer-lostark.game.onstove.com/armories/characters/"CharacterName"/profiles](https://developer-lostark.game.onstove.com/armories/characters/%22CharacterName%22/profiles)
     * [https://developer-lostark.game.onstove.com/characters/"CharacterName"/siblings](https://developer-lostark.game.onstove.com/characters/%22CharacterName%22/siblings)
 2. lostark auction jewel plt.py
-    * [https://developer-lostark.game.onstove.com/auctions/items](https://developer-lostark.game.onstove.com/auctions/items)
+    * [https://developer-lostark.game.onstove.com/auctions/items](https://developer-lostark.game.onstove.com/auctions/items[lostark_jewel_test.xlsx](https://github.com/user-attachments/files/17088527/lostark_jewel_test.xlsx)
+)[lostark_jewel_test.xlsx](https://github.com/user-attachments/files/17088525/lostark_jewel_test.xlsx)
+
 3. lostark auction jewel excel.py
-    * [https://developer-lostark.game.onstove.com/auctions/items](https://developer-lostark.game.onstove.com/auctions/items)
+    * [https://deve[lostark_jewel_test.xlsx](https://github.com/user-attachments/files/17088524/lostark_jewel_test.xlsx)
+loper-lostark.game.onstove.com/auctions/items](https://developer-lostark.game.onstove.com/auctions/items)
 
 ### 4\. 참고사항 \(Notes\)
 
