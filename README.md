@@ -49,6 +49,7 @@
     * 1분 간격으로 가격을 기록하여, 시간에 따른 가격 변화를 보여줍니다.
 3. 명령어 실행 예시
       <details>
+         <summary>명령어 실행 예시 보기/접기</summary>
             <a href="https://github.com/user-attachments/files/17088528/lostark_jewel_test.xlsx" target="_blank">
           lostark_jewel_test.xlsx 파일 다운로드
         </a>
@@ -118,7 +119,7 @@
 3. 명령어 실행 예시
       <details>
          <summary>명령어 실행 예시 보기/접기</summary>
-            <img src = "https://github.com/user-attachments/assets/e6550313-b487-4096-b3df-3564ec51d1c0 alt = "명령어 실행 예시">
+            <img src = "https://github.com/user-attachments/assets/729568aa-9a2e-4fe6-953a-956c5f9df912" alt = "명령어 실행 예시">
           </details>
 ### 2\. 사전 요구사항 \(Prerequisites\)
 
