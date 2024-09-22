@@ -109,7 +109,17 @@
          <summary>명령어 실행 예시 보기/접기</summary>
             <img src = "https://github.com/user-attachments/assets/a7e638fd-fc5d-4a6e-8690-63aeebd68a7d" alt = "명령어 실행 예시">
           </details>
-
+#### 2. shopping_categories.py
+1. 프로젝트 개요 (Introduction)
+    * 이 프로젝트는 네이버 쇼핑인사이트 API를 활용하여 특정 카테고리의 쇼핑 트렌드를 조회하는 프로그램입니다. 사용자는 지정한 기간 동안의 카테고리별 트렌드 데이터를 조회할 수 있습니다. 이 프로젝트에서는 '노트북'과 'PC'에 대한 검색 트렌드를 조회하고, 결과를 출력하는 기능을 제공합니다.
+2. 기능 설명 (Features)
+    * 네이버 쇼핑인사이트 API를 사용해 특정 카테고리(노트북, PC)의 월별 쇼핑 트렌드 데이터를 조회.
+    * 조회된 결과를 JSON 형식으로 받아 가독성을 높이기 위해 pprint를 사용하여 출력.
+3. 명령어 실행 예시
+      <details>
+         <summary>명령어 실행 예시 보기/접기</summary>
+            <img src = "https://github.com/user-attachments/assets/e6550313-b487-4096-b3df-3564ec51d1c0 alt = "명령어 실행 예시">
+          </details>
 ### 2\. 사전 요구사항 \(Prerequisites\)
 
 * Python 3.x 설치
@@ -118,11 +128,13 @@
 
 
 ### 3. 사용한 API [출처](https://developers.naver.com/docs/common/openapiguide/apilist.md#%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EB%B0%A9%EC%8B%9D-%EC%98%A4%ED%94%88-api)
-
+1.  search_local.py
+    * https://openapi.naver.com/v1/search//local.json
+2. shopping_categories.py
+    * https://openapi.naver.com/v1/datalab/shopping/categories
 
 ### 4\. 참고사항 \(Notes\)
-
-* 
+* naver_api_token.py 파일에 API 인증 키가 필요합니다. 네이버 개발자 페이지에서 발급받은 client_id 와 client_secret 을 설정해주세요.
 ### 5\. 설치 방법 \(Installation\)
 
 1. 프로젝트를 로컬에 클론합니다.
